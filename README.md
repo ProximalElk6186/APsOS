@@ -27,10 +27,10 @@ Think of it as of a successor (but not based on) for Windows 9x.
 |MS-DOS 6.22|Absolutely required|FreeDOS and older versions of MS-DOS may work as well, not tested|From Microsoft, no legal way currently|Proprietary, for versions 1.00, 3.00 and 4.00 — MIT
 |MOUSE.COM|Absolutely required|No navigation without it, plus why would you use a GUI without a mouse?|Bundled with MS-DOS|Proprietary
 |HIMEM.SYS|Very highly recommended|More RAM is usable. On PCs with lots of RAM, use /TESTMEM:OFF, or else it will hang|Bundled with MS-DOS|Proprietary
-|HIMEMX.EXE|Very highly recommended|Use instead of HIMEM.SYS. Fixes its bugs.|Here|GPL
-|Cutemouse|Very highly recommended|Use instead of MOUSE.COM. Supports mice with wheel|Here|?
-|HIMEMSX.EXE|Highly recommended|Use instead of HIMEM.SYS and HIMEMX.EXE. Allows for even more RAM, up to 1TB|Here|GPL
-|SBEMU|Recommended on modern PCs with AC‘97 or Intel HDA sound chips|Emulates the Sound Blaster. For memory management, use the second method with JEMM386. Download the version v5.84 of JEMM386 from here (starts a 123KB download)|Here|GPLv2
+|HIMEMX.EXE|Very highly recommended|Use instead of HIMEM.SYS. Fixes its bugs.|[Here](https://github.com/Baron-von-Riedesel/HimemX)|GPL
+|Cutemouse|Very highly recommended|Use instead of MOUSE.COM. Supports mice with wheel|[Here](https://cutemouse.sourceforge.net/)|?
+|HIMEMSX.EXE|Highly recommended|Use instead of HIMEM.SYS and HIMEMX.EXE. Allows for even more RAM, up to 1TB|[Here](https://github.com/Baron-von-Riedesel/HimemSX)|GPL
+|SBEMU|Recommended on modern PCs with AC‘97 or Intel HDA sound chips|Emulates the Sound Blaster. For memory management, use the second method with JEMM386. Download the version v5.84 of JEMM386 from [here](https://github.com/Baron-von-Riedesel/Jemm/releases/download/v5.84/JemmB_v584.zip) (starts a 123KB download)|[Here](https://github.com/crazii/SBEMU/releases/tag/Release_1.0.0-beta.5)|GPLv2
 
 
 ## Contributing note
