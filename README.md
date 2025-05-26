@@ -15,7 +15,7 @@ Think of it as of a successor (but not based on) for Windows 9x.
 
 | | Minimal | Recommended |
 |---|---|---|
-|CPU|386|Intel Pentium|
+|CPU|i386|Intel Pentium|
 |RAM|1MB|24MB|
 |HDD|50MB|2GB|
 |GPU|VGA MODE X compatible|
