@@ -6,8 +6,9 @@ Another PC semi-OS
 It‘s an another MS-DOS-based OS for retro (and not so) computers running MS-DOS. 
 Think of it as of a successor (but not based on) for Windows 9x. 
 ## Project goals
-- Revreate 9x's interface
-- TBA
+- Recreate 9x's interface
+- Make it bluescreen about as often as 9x does
+- Make it support DOS programs and **some** Windows ones (optional goal, doesn't have to be accomplished)
 ## Requirements
 
 
