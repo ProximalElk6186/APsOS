@@ -3,14 +3,18 @@ Another PC semi-OS
 
 
 ## What‘s that?
-It‘s in the name
+It‘s an another MS-DOS-based OS for retro (and not so) computers running MS-DOS. 
+Think of it as of a successor (but not based on) for Windows 9x. 
+## Project goals
+- Revreate 9x's interface
+- TBA
 ## Requirements
 
 
 
 | | Minimal | Recommended |
 |---|---|---|
-|CPU|286|Intel Pentium|
+|CPU|386|Intel Pentium|
 |RAM|1MB|24MB|
 |HDD|50MB|2GB|
 |GPU|VGA MODE X compatible|
