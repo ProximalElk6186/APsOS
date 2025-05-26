@@ -9,30 +9,18 @@ It‘s in the name
 
 
 | | Minimal | Recommended |
-CPU
-286
-Intel Pentium
-RAM
-1MB
-24MB
-HDD
-50MB
-2GB
-GPU
-80x25 text mode compatible
-80x50 text mode compatible
+|---|---|---|
+|CPU|286|Intel Pentium|
+|RAM|1MB|24MB|
+|HDD|50MB|2GB|
+|GPU|VGA MODE X compatible|
 
 
-Other software requirements
+## Other software requirements
 
-Software
-Requirement level
-Notes
-Where to get?
-License
-MS-DOS 6.22
-Absolutely required
-FreeDOS and older versions of MS-DOS may work as well, not tested
+|Software|Requirement level|Notes|Where to get?|License|
+|---|---|---|---|---|
+|MS-DOS 6.22|Absolutely required|FreeDOS and older versions of MS-DOS may work as well, not tested
 From Microsoft, no legal way currently
 Proprietary, for versions 1.00, 3.00 and 4.00 — MIT
 MOUSE.COM
