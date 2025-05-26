@@ -1,0 +1,163 @@
+Open Watcom Linker Version 2.0 beta Mar 31 2025 02:39:33 (64-bit)
+Copyright (c) 2002-2025 The Open Watcom Contributors. All Rights Reserved.
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       25/05/25 22:07:05
+Executable Image: AGDS.exe
+creating a CauseWay executable
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          0002:00000000        000108b0
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+BEGTEXT                CODE           AUTO           0001:00000000   00000010
+_TEXT                  CODE           AUTO           0001:00000010   000007c6
+_NULL                  BEGDATA        DGROUP         0002:00000000   00000004
+_AFTERNULL             BEGDATA        DGROUP         0002:00000004   00000000
+CONST                  DATA           DGROUP         0002:00000004   00000022
+CONST2                 DATA           DGROUP         0002:00000028   00000000
+_DATA                  DATA           DGROUP         0002:00000028   0000086c
+XIB                    DATA           DGROUP         0002:00000894   00000000
+XI                     DATA           DGROUP         0002:00000894   00000006
+XIE                    DATA           DGROUP         0002:0000089a   00000000
+YIB                    DATA           DGROUP         0002:0000089a   00000000
+YI                     DATA           DGROUP         0002:0000089a   00000000
+YIE                    DATA           DGROUP         0002:0000089a   00000000
+TIB                    DATA           DGROUP         0002:0000089a   00000000
+TI                     DATA           DGROUP         0002:0000089a   00000000
+TIE                    DATA           DGROUP         0002:0000089a   00000000
+DATA                   DATA           DGROUP         0002:0000089a   00000000
+_BSS                   BSS            DGROUP         0002:0000089c   00000008
+STACK                  STACK          DGROUP         0002:000008b0   00010000
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: main.obj(C:\Users\ProximalElk6186\Documents\AGDS\main.c)
+0001:00000010+ draw_string_
+0001:00000066+ set_video_mode_
+0001:00000097+ putpixel_
+0001:000000d6+ draw_char_
+0001:0000018b+ clear_screen_
+0001:000001df  main_
+0002:00000028+ _font8x8_basic
+Module: C:\WATCOM\lib386\dos\clib3r.lib(stk)
+0001:0000023f* __STK
+0001:00000243  __CHK
+0001:0000023c* __GRO
+0001:00000269* __STKOVERFLOW_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(cstart)
+0001:00000003* ___begtext
+0002:00000000* __nullarea
+0002:0000083c* __D16Infoseg
+0002:0000083e* __x386_zero_base_selector
+0001:00000278  _cstart_
+0001:00000471  __exit_
+0001:00000474  __do_exit_with_msg_
+0001:0000053c* __GETDS
+0001:0000053c  ___GETDSStart_
+0001:00000547  ___GETDSEnd_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(xmsg)
+0001:00000550* __exit_with_msg_
+0001:00000560  __fatal_runtime_error_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(crwdata)
+0002:0000087a  __osmajor
+0002:0000087b  __osminor
+0002:00000848  __LpCmdLine
+0002:0000084c  __LpPgmName
+0002:00000840  __dynend
+0002:00000844  __curbrk
+0002:00000864* __cbyte
+0002:00000868* __cbyte2
+0002:0000086c  __child
+0002:00000874  __Envptr
+0002:00000850  __psp
+0002:00000871  __Extender
+0002:00000872  __ExtenderSubtype
+0002:00000873* __X32VM
+0002:00000854* __x386_stacklow
+0002:00000854  __STACKLOW
+0002:00000858  __STACKTOP
+0002:0000085c  __ASTACKSIZ
+0002:00000860  __ASTACKPTR
+0002:00000870  __no87
+0002:0000087c  ___FPE_handler
+Module: C:\WATCOM\lib386\dos\clib3r.lib(cmain386)
+0001:00000580  __CMain
+Module: C:\WATCOM\lib386\dos\clib3r.lib(initrtns)
+0001:000005d0  __InitRtns
+0001:00000620  __FiniRtns
+Module: C:\WATCOM\lib386\dos\clib3r.lib(dosseg)
+0000:00001234  __DOSseg__
+Module: C:\WATCOM\lib386\dos\clib3r.lib(uselfn)
+0002:00000880  ___uselfn
+Module: C:\WATCOM\lib386\dos\clib3r.lib(enterdb)
+0001:00000680  __EnterWVIDEO_
+0002:00000884+ __WD_Present
+Module: C:\WATCOM\lib386\dos\clib3r.lib(cinit)
+0001:000006b0  __CommonInit_
+Module: C:\WATCOM\lib386\dos\clib3r.lib(___argc)
+0002:0000089c  ____Argv
+0002:000008a0  ____Argc
+Module: C:\WATCOM\lib386\dos\clib3r.lib(exit)
+0001:00000700+ __null_int23_exit_
+0001:00000701  exit_
+0001:0000072b* _exit_
+0002:00000888+ ___int23_exit
+0002:0000088c+ ___FPE_handler_exit
+Module: C:\WATCOM\lib386\dos\clib3r.lib(sgdef086)
+0002:00000894  __Start_XI
+0002:0000089a  __End_XI
+0002:0000089a  __Start_YI
+0002:0000089a  __End_YI
+Module: C:\WATCOM\lib386\dos\clib3r.lib(dpmihost)
+0001:00000740  __DPMI_hosted_
+
+
+                        +----------------------+
+                        |   Imported Symbols   |
+                        +----------------------+
+
+Symbol                              Module
+======                              ======
+
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+
+C:\WATCOM\lib386\dos\clib3r.lib
+
+
+                        +-----------------------+
+                        |   Linker Statistics   |
+                        +-----------------------+
+
+Stack size:  00010000 (65536.)
+Memory size:  00011086 (69766.)
+Entry point address: 0001:00000278
+Stub file: C:\WATCOM\BINW\cwstub.exe
+Link time: 00:00.02
