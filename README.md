@@ -25,7 +25,7 @@ Think of it as of a successor (but not based on) for Windows 9x.
 
 |Software|Requirement level|Use instead of|Notes|Direct download links|License|Source code download links (if not proprietary)|
 |---|---|---|---|---|---|---|
-|MS-DOS 6.22|Absolutely required|—|FreeDOS and older versions of MS-DOS may work as well, not tested|From Microsoft, no legal way currently|Proprietary, for versions 1.00, 3.00 and 4.00 — MIT|[Here](https://github.com/microsoft/MS-DOS)
+|MS-DOS 6.22 (or maybe older, didn't really test — but I think higher than 4.00)|Absolutely required|—|FreeDOS and older versions of MS-DOS may work as well, not tested|From Microsoft, no legal way currently|Proprietary, for versions 1.00, 3.00 and 4.00 — MIT|[Here](https://github.com/microsoft/MS-DOS)
 |MOUSE.COM|Absolutely required|—|No navigation without it, plus why would you use a GUI without a mouse?|Bundled with MS-DOS|Proprietary
 |HIMEM.SYS|Very highly recommended|—|More RAM is usable. On PCs with lots of RAM, use /TESTMEM:OFF, or else it will hang|Bundled with MS-DOS|Proprietary
 |HIMEMX.EXE|Very highly recommended|Use instead of HIMEM.SYS. |Fixes its bugs.|[Here](https://github.com/Baron-von-Riedesel/HimemX)|GPL|[Here](https://github.com/Baron-von-Riedesel/HimemX)
