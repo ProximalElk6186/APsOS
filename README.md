@@ -64,7 +64,7 @@ Just copy-pasted from section "Other software requirements"
 |HIMEMSX.EXE|"Super" high memory manager (supports even more RAM than HIMEMX does)|Highly recommended|Use instead of HIMEM.SYS and HIMEMX.EXE. |Allows for even more RAM, up to 1TB|[Here](https://github.com/Baron-von-Riedesel/HimemSX)|GPL|[Here](https://github.com/Baron-von-Riedesel/HimemSX)
 |SBEMU|_**Sound Blaster 1.0**_, _**Sound Blaster 2.0**_, _**Sound Blaster Pro**_, _**Sound Blaster Pro2**_, _**Sound Blaster 16**_ (**8-bit** and **16-bit** **DMA** (*mono*, *stereo*, *high-speed* modes)), _**OPL3**_ emulator for modern sound cards like **Intel ICH / nForce / SIS 7012**, **Intel High Definition Audio (HDA)**, **VIA VT82C686**, **VT8233/37**, **SB Live! / Audigy**, **SB Audigy LS (CA0106)**, **Ensoniq ES1371/1373**, **C-Media CMI8338/8738**|Recommended on modern PCs with AC‘97 or Intel HDA sound chips|—|Emulates the Sound Blaster. For memory management, use the second method with JEMM386. Download the version v5.84 of [JEMM386](https://github.com/Baron-von-Riedesel/Jemm) from [here](https://github.com/Baron-von-Riedesel/Jemm/releases/download/v5.84/JemmB_v584.zip) (starts a 123KB download)|[Here](https://github.com/crazii/SBEMU/releases/tag/Release_1.0.0-beta.5)|GPLv2|[Here](https://github.com/crazii/SBEMU)
 #### Testing
-> ![NOTE]
+> [!NOTE]
 > This section isn't written yet
 
 ## Contributing note
