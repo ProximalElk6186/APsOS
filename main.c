@@ -1,54 +1,59 @@
-#include <stdint.h>
-#include "inc\font8x8.c"
+#include <dos.h>
+#include <stdio.h>
+#include <conio.h>
 
-typedef unsigned char uint8;
+unsigned char far *vga_ptr = NULL;
 
-//uint8 font8x8[256][8] = {
-//    [65] = { 0x18, 0x24, 0x42, 0x7E, 0x42, 0x42, 0x42, 0x00 }, // 'A'
-//};
-void draw_string(int x, int y, const char* str, uint8 color) {
-    while (*str) {
-        draw_char(x, y, *str++, color);
-        x += 8; // Advance 8 pixels for next character
+void set_mode_13h() {
+    union REGS regs;
+    regs.h.ah = 0x00;
+    regs.h.al = 0x13;
+    int386(0x10, &regs, &regs);
+}
+
+void set_text_mode() {
+    union REGS regs;
+    regs.h.ah = 0x00;
+    regs.h.al = 0x03;
+    int386(0x10, &regs, &regs);
+}
+
+int map_vga_memory() {
+    union REGS regs;
+    struct SREGS sregs;
+
+    regs.x.ax = 0x0800;       // DPMI: Map conventional memory
+    regs.x.bx = 0xA000;       // Segment A000h
+    regs.x.cx = 0x1000;       // 64KB (in paragraphs)
+    int386x(0x31, &regs, &regs, &sregs);
+
+    if (regs.x.cflag) {
+        printf("Failed to map VGA memory!\n");
+        return 0;
     }
+
+    vga_ptr = (unsigned char far *)MK_FP(sregs.es, regs.x.di);
+    return 1;
 }
 
-void set_video_mode(uint16_t mode) {
-    __asm {
-        mov  ax, 0x4F02
-        mov  bx, mode
-        int  0x10
+int main() {
+    int y, x;
+    set_mode_13h();
+
+    if (!map_vga_memory()) {
+        set_text_mode();
+        return 1;
     }
-}
 
-void putpixel(int x, int y, uint8 color) {
-    uint8* vram = (uint8*)0xA0000;
-    vram[y * 320 + x] = color;
-}
-
-void draw_char(int x, int y, char c, uint8 color) {
-    int row, col;
-    uint8* font = font8x8_basic[(uint8)c];
-
-    for (row = 0; row < 8; ++row) {
-        uint8 bits = font[row];
-        for (col = 0; col < 8; ++col) {
-            if (bits & (1 << 7)) {
-                putpixel(x + col, y + row, color);
-            }
+    // Draw checkerboard pattern
+    for (y = 0; y < 200; y++) {
+        for (x = 0; x < 320; x++) {
+            vga_ptr[y * 320 + x] = (x ^ y) & 0xFF; // XOR pattern
         }
     }
-}
-void clear_screen(uint8 color) {
-    uint8* vram = (uint8*)0xA0000;
-    int i;
-    for (i = 0; i < 320 * 200; ++i)
-        vram[i] = color;
-}
 
-void main() {
-    set_video_mode(0x13);
-    clear_screen(1); // Blue background
-    draw_string(10, 10, "FATAL ERROR: Something went wrong", 15); // White text
-    while (1); // Wait
+    getch(); // Wait for keypress
+
+    set_text_mode();
+    return 0;
 }
